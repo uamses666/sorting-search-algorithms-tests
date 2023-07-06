@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/c++  -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX13.3.sdk -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/algorithm.dir/Source/main.cpp.o CMakeFiles/algorithm.dir/Source/SimpleTimer.cpp.o  -o algorithm 
