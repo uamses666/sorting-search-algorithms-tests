@@ -20,8 +20,6 @@ public:
     template<typename Iterator>
     static void merge_sort(Iterator begin, Iterator end);
 
-    template<typename Iterator>
-    static void reverse_sort(Iterator rbegin,Iterator rend);
 };
 template<typename Iterator>
 void Sorting::bubble_sort(Iterator begin, Iterator end) {
@@ -112,22 +110,7 @@ void Sorting::merge_sort(Iterator begin, Iterator end) {
     }
 }
 
-template<typename Iterator>
-void Sorting::reverse_sort(Iterator rbegin, Iterator rend) {
-    if (std::distance(rbegin, rend) <= 1 || std::is_sorted(rbegin,rend))
-        return;
 
-    try {
-        for (auto it = rbegin; it != rend - 1; ++it) {
-            for (auto it2 = it + 1; it2 != rend; ++it2) {
-                if (*it > *it2)
-                    std::iter_swap(it, it2);
-            }
-        }
-    } catch (const std::exception& e) {
-        std::cout << "Exception occurred during bubble sort: " << e.what() << std::endl;
-    }
-}
 
 
 #endif //ALGORITHM_SORTING_H

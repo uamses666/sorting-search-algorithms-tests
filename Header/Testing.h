@@ -74,14 +74,6 @@ void Testing::TestSortingAlgorithms(const Container &original) {
         Sorting::merge_sort(begin(container), end(container));
     }
     PrintContainer(container);
-
-    std::cout<<"Reverse Sort: ";
-    container=original;
-    {
-        SimpleTimer tm;
-        Sorting::reverse_sort(std::rbegin(container), std::rend(container));
-    }
-    PrintContainer(container);
 }
 
 template<typename Container, typename T>
